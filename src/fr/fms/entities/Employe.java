@@ -5,6 +5,8 @@ public class Employe extends Person {
 	private String entreprise;
 	private double salary;
 	
+	final double MIN_SALARY = 1;
+	
 	// Constructeur :
 	public Employe(String lastName, String name, int age, String adress, City bornCity, String entreprise, double salary) {
 		super(lastName, name, age, adress, bornCity);
@@ -44,7 +46,7 @@ public class Employe extends Person {
 	public void setSalary(double salary) {
 		if(salary < 0) {
 			System.out.println("Le salaire d'un employer ne peux pas être inférieur à 0 !");
-			return;
+			this.salary = MIN_SALARY;
 		}
 		this.salary = salary;
 	}
