@@ -1,7 +1,5 @@
 package fr.fms.entities;
 
-import fr.fms.classe.City;
-
 public class Person {
 	// Attributs :
 	public String lastName;		// Nom
@@ -16,8 +14,7 @@ public class Person {
 		this.name = name;
 		this.age = age;
 		this.adress = adress;
-		this.bornCity = bornCity;
-		
+		this.bornCity = bornCity;	
 	}
 	
 	public Person(String lastName, String name, int age) {
