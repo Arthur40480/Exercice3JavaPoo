@@ -6,7 +6,7 @@ public class Test {
 		Capital londres = new Capital("Londres", "France", 100000, "BigBen");
 		Capital bangkok = new Capital("Bangkok", "Thaïlande", 300000, "Le Louvre");
 		Capital paris = new Capital("Bayonne", "France", 100000, "La Tour Eiffel");
-
+		Employe marchand = new Employe("Nom", "Prenom", 30, "Adresse", londres, "FMS", 1400);
 		londres.setCountry("Angleterre");
 		bangkok.setMonument("The Grand Palace");
 		paris.setCityName("Paris");
@@ -20,6 +20,9 @@ public class Test {
 		System.out.println(londres);
 		System.out.println(bangkok);
 		System.out.println(paris);
+		
+		Person bernard = new Person("Nom", "Prenom", 30, "Adresse", londres);
+		System.out.println(marchand);
 	}
 
 }
