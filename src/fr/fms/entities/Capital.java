@@ -2,7 +2,7 @@ package fr.fms.entities;
 
 public class Capital extends City {
 	// Attributs ( tous les attributs de City ) + :
-	 public String monument;		// Monument
+	 private String monument;		// Monument
 	
 	// Constructeur :
 	public Capital(String cityName, String country, int nbrPeople, String monument) {
@@ -25,7 +25,7 @@ public class Capital extends City {
 	// Méthode de classe permettant d'utiliser system.out.println() directement sur l'objet en question :
 	@Override
 	public String toString() {
-		return this.cityName + " , " + this.country + " , " + this.getNbrPeople() + " d'habitants monument : " + this.monument;
+		return this.getCityName() + " , " + this.getCountry() + " , " + this.getNbrInhabitant()+ " d'habitants monument : " + this.monument;
 	}
 	
 }

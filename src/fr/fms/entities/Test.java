@@ -10,12 +10,12 @@ public class Test {
 		londres.setCountry("Angleterre");
 		bangkok.setMonument("The Grand Palace");
 		paris.setCityName("Paris");
-		paris.setNbrPeople(600000);
+		paris.setNbrInhabitant(600000);;
 		
 		System.out.println(londres.getCountry());
 		System.out.println(bangkok.getMonument());
 		System.out.println(paris.getCityName());
-		System.out.println(paris.getNbrPeople());
+		System.out.println(paris.getNbrInhabitant());
 		
 		System.out.println(londres);
 		System.out.println(bangkok);

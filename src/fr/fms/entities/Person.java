@@ -2,11 +2,11 @@ package fr.fms.entities;
 
 public class Person {
 	// Attributs :
-	public String lastName;		// Nom
-	public String name;			// Prénom
-	public int age;				// Age
-	public String adress;		// Adresse
-	public City bornCity;		// Ville de naissance
+	private String lastName;		// Nom
+	private String name;			// Prénom
+	private int age;				// Age
+	private String adress;			// Adresse
+	public City bornCity;			// Ville de naissance
 	
 	// Constructeur :
 	public Person(String lastName, String name, int age, String adress, City bornCity) {
@@ -69,10 +69,10 @@ public class Person {
 	// Méthode de classe :
 	// Méthode de classe permettant d'utiliser system.out.println() directement sur l'objet en question :
 	public String toString() {
-		if(!this.bornCity.cityName.equals("Bornnul")) {
+		if(!this.bornCity.getCityName().equals("Bornnul")) {
 			return "[lastName= " + this.lastName + ", firstName= " + this.name + ", âge= " + this.age + 
-					", adress=" + this.adress + "] BornCity [name= " + this.bornCity.cityName + ", state= " 
-					+ this.bornCity.country + ", nbInhabitants= " + this.bornCity.getNbrPeople() + "]";
+					", adress=" + this.adress + "] BornCity [name= " + this.bornCity.getCityName() + ", state= " 
+					+ this.bornCity.getCountry() + ", nbInhabitants= " + this.bornCity.getNbrInhabitant() + "]";
 
 		} else {
 			return "[lastName= " + this.lastName + ", firstName= " + this.name + ", âge= " + this.age + 

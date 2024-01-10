@@ -37,13 +37,13 @@ public class Employe extends Person {
 	public String toString() {
 		if(bornCity instanceof Capital) {
 			Capital capital = (Capital) this.bornCity;
-			return this.lastName + " , " + this.name + " , " + this.age + "ans , habitant: " + this.adress + " , Ville de naissance : " +
-					capital.cityName + " , " + capital.country + " , " + capital.getNbrPeople() + " d'habitants , monument :" + capital.getMonument()
+			return this.getLastName() + " , " + this.getName() + " , " + this.getAge() + "ans , habitant: " + this.getAdress() + " , Ville de naissance : " +
+					capital.getCityName() + " , " + capital.getCountry() + " , " + capital.getNbrInhabitant() + " d'habitants , monument :" + capital.getMonument()
 					+ " , Entreprise : " + this.entreprise + " , salaire : " + this.salary;  
 					
 		} else {
-			return this.lastName + " , " + this.name + " , " + this.age + "ans , habitant: " + this.adress + " , Ville de naissance : " +
-					this.bornCity.cityName + " , " + this.bornCity.country + " , " + this.bornCity.getNbrPeople()+ " , Entreprise : " + 
+			return this.getLastName() + " , " + this.getName() + " , " + this.getAge() + "ans , habitant: " + this.getAdress() + " , Ville de naissance : " +
+					this.bornCity.getCityName() + " , " + this.bornCity.getCountry() + " , " + this.bornCity.getNbrInhabitant()+ " , Entreprise : " + 
 					this.entreprise + " , salaire : " + this.salary;  
 		}
 
