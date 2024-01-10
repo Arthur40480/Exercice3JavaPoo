@@ -20,12 +20,12 @@ public class Employe extends Person {
 		if(bornCity instanceof Capital) {
 			Capital capital = (Capital) this.bornCity;
 			return this.getLastName() + " , " + this.getName() + " , " + this.getAge() + "ans , habitant: " + this.getAdress() + " , Ville de naissance : " +
-					capital.getCityName() + " , " + capital.getCountry() + " , " + capital.getNbrInhabitant() + " habitants , monument :" + capital.getMonument()
+					capital.getCityName() + " , " + capital.getCountry() + " , monument :" + capital.getMonument()
 					+ " , Entreprise : " + this.entreprise + " , salaire : " + this.salary;  
 		// Sinon :			
 		} else {
 			return this.getLastName() + " , " + this.getName() + " , " + this.getAge() + "ans , habitant: " + this.getAdress() + " , Ville de naissance : " +
-					this.bornCity.getCityName() + " , " + this.bornCity.getCountry() + " , " + this.bornCity.getNbrInhabitant()+ " habitants , Entreprise : " + 
+					this.bornCity.getCityName() + " , " + this.bornCity.getCountry() + " , Entreprise : " + 
 					this.entreprise + " , salaire : " + this.salary;  
 		}
 	}
