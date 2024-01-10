@@ -1,7 +1,5 @@
 package fr.fms.entities;
 
-import fr.fms.entities.*;
-
 public class Capital extends City {
 	// Attributs ( tous les attributs de City ) + :
 	String monument;		// Monument
