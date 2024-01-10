@@ -29,7 +29,7 @@ public class Employe extends Person {
 					this.entreprise + " , salaire : " + this.salary;  
 		}
 	}
-	
+		
 	// Accesseur (getter setter) :
 	public String getEntreprise() {
 		return this.entreprise;

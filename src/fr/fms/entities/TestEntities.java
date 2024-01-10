@@ -13,8 +13,11 @@ public class TestEntities {
 		Commerciale charles = new Commerciale("Jean", "Charle", 45, "rue des baleines", new City("Montpellier", "France", 12000), "Jardiland", 2);
 		Commerciale bernard = new Commerciale("Bernard", "Navarro", 70, "camping la dune", new City("Biscarosse", "France", 2000), "Crédit Agricole", 22);
 		Commerciale henry = new Commerciale("Henry", "Smith", 25, "quartier mora", new City("Moliets", "France", 1000), "FMS", 0.2);
+		
 		Employe antoinette = new Employe("Antoinette", "Lafitte", 38, "n°12 avenue des dindes", new Capital("Paris", "France", 100000, "Tour Eiffel"), "Decathlon", 1400);
 		Employe bernadette = new Employe("Bernadette", "Trucho", 38, "Immeuble 8 ", new Capital("Bangkok", "Thaïlande", 800000, "The Grand Palace"), "Marché", 10000);
+		
+		Person zidane = new Person("Zinedine", "Zidane", 40, "Le hall des champions", new City("Dax", "France", 15000));
 		
 		// On ajoute les instance de la classe Commerciale et Employe à notre personTab :
 		personTab[0] = charles;
@@ -50,6 +53,29 @@ public class TestEntities {
 			System.out.println(employe);
 		}
 		System.out.println();
+		
+		remuneration(charles, 900000);
+		System.out.println(charles);
+		remuneration(antoinette, 10);
+		System.out.println(antoinette);
+		remuneration(zidane, 10);
 	}
-
+	// Méthode permettant de calculer le nouveau salaire pour un Employe ou la nouvelle rémuneration pour un Commerciale :
+	public static void remuneration(Person person, double chargesOrCa) {
+		// Si person est une instance de Commerciale alors :
+		if(person instanceof Commerciale) {
+			double remuneration = ((Commerciale) person).getRemuneration();
+			double newRemuneration = (chargesOrCa * remuneration) / 100;
+			((Commerciale) person).setRemuneration(newRemuneration);
+		// Si person est une instance de Employe alors :
+		} else if(person instanceof Employe) {
+			double salary = ((Employe) person).getSalary();
+			double newSalary = salary - ((chargesOrCa * salary) / 100);
+			((Employe) person).setSalary(newSalary);
+		// Sinon :
+		} else {
+			System.out.println("Ce n'est ni un Employe ni un Commercial, impossible d'utiliser la méthode remuneration !");
+			return;
+		}
+	}
 }
