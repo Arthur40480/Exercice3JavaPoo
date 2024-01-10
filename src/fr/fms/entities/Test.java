@@ -3,11 +3,10 @@ package fr.fms.entities;
 public class Test {
 
 	public static void main(String[] args) {
+		// EXERCICE 3.1 :
 		Capital londres = new Capital("Londres", "France", 100000, "BigBen");
 		Capital bangkok = new Capital("Bangkok", "Thaïlande", 300000, "Le Louvre");
 		Capital paris = new Capital("Bayonne", "France", 100000, "La Tour Eiffel");
-		
-		City bayonne = new City("Bayonne", "France", 100000);
 		
 		londres.setCountry("Angleterre");
 		bangkok.setMonument("The Grand Palace");
@@ -23,16 +22,21 @@ public class Test {
 		System.out.println(bangkok);
 		System.out.println(paris);
 		
-		Person bernard = new Person("Nom", "Prenom", 30, "Adresse", londres);
+		// EXERCICE 3.2 :
+		City bayonne = new City("Bayonne", "France", 100000);
 		
-		Employe marchand = new Employe("Nom", "Prenom", 30, "Adresse", londres, "FMS", 1400);
-		Employe macon = new Employe("Nom", "Prenom", 30, "Adresse", bayonne, "FMS", 1400);
-		System.out.println(marchand);
-		System.out.println(macon);
+		Employe guillaume = new Employe("Coutarel", "Guillaume", 30, "15 avenue des tapis", londres, "E.Leclerc", 1400);
+		Employe romain = new Employe("Couture", "Romain", 30, "5 rue des tulipes", bayonne, "FMS", 1800);
 		
-		Commerciale a = new Commerciale("Gibert", "Arthur", 30, "15 rue des artisans", new City("Toulouse", "France", 250000), "FMS", 50);
-		a.setRemuneration(-10);
-		System.out.println(a.getRemuneration());
+		System.out.println(guillaume);
+		System.out.println(romain);
+		
+		// EXERCICE 3.3 :
+		Commerciale arthur = new Commerciale("Gibert", "Arthur", 30, "15 rue des artisans", new City("Toulouse", "France", 250000), "FMS", 50);
+		System.out.println(arthur);
+		
+		// EXERCICE 3.4:
+		// EXERCICE 3.5:
 	}
 
 }

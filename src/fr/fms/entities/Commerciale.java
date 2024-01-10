@@ -18,8 +18,7 @@ public class Commerciale extends Person {
 	public String toString() {
 		return this.getLastName() + " , " + this.getName() + " , " + this.getAge() + "ans , habitant " +
 				this.getAdress() + " , Ville de naissance :" + this.bornCity.getCityName() + " , " + 
-				this.bornCity.getCountry() + " , " + this.bornCity.getNbrInhabitant() + " habitants , Entreprise : " +
-				this.entreprise + " , % CA : " + this.remuneration;
+				this.bornCity.getCountry() + " , Entreprise : " + this.entreprise + " , % CA : " + this.remuneration;
 	}
 	
 	// Accesseurs (getter et setter) :

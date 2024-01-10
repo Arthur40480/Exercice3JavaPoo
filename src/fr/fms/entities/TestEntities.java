@@ -5,6 +5,7 @@ import java.util.*;
 public class TestEntities {
 
 	public static void main(String[] args) {
+		// EXERCICE 3.6 :
 		// On créer le tableau de Person qui contiendras des instance d'Employe et de Commerciale :
 		Person[] personTab = new Person[5];
 		ArrayList<Commerciale> commercialeList = new ArrayList<>();
@@ -16,9 +17,7 @@ public class TestEntities {
 		
 		Employe antoinette = new Employe("Antoinette", "Lafitte", 38, "n°12 avenue des dindes", new Capital("Paris", "France", 100000, "Tour Eiffel"), "Decathlon", 1400);
 		Employe bernadette = new Employe("Bernadette", "Trucho", 38, "Immeuble 8 ", new Capital("Bangkok", "Thaïlande", 800000, "The Grand Palace"), "Marché", 10000);
-		
-		Person zidane = new Person("Zinedine", "Zidane", 40, "Le hall des champions", new City("Dax", "France", 15000));
-		
+				
 		// On ajoute les instance de la classe Commerciale et Employe à notre personTab :
 		personTab[0] = charles;
 		personTab[1] = bernard;
@@ -54,10 +53,14 @@ public class TestEntities {
 		}
 		System.out.println();
 		
+		// EXERCICE 3.7 :
 		remuneration(charles, 900000);
 		System.out.println(charles);
+		
 		remuneration(antoinette, 10);
 		System.out.println(antoinette);
+		
+		Person zidane = new Person("Zinedine", "Zidane", 40, "Le hall des champions", new City("Dax", "France", 15000));
 		remuneration(zidane, 10);
 	}
 	// Méthode permettant de calculer le nouveau salaire pour un Employe ou la nouvelle rémuneration pour un Commerciale :
